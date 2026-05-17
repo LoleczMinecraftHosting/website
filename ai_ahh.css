@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+.ai-ahh, .ai-ahh * {
+    all: revert;
+}
+p.ai-ahh,
+h1.ai-ahh,
+h2.ai-ahh {
+    text-shadow: none;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+}
+
+.ai-ahh.background {
+    position: relative;
+    padding: 50px;
+    background: linear-gradient(132deg, #ea6cb6 2.2%, #7a87ff 96.97%);
+
+    mask-image: linear-gradient(#fff 0 0), url("assets/fuck_ai_ahh.png");
+    mask-repeat: no-repeat, repeat-x;
+    mask-position: top left, bottom left;
+    mask-size: 100% calc(100% - 69px), auto 69px;
+    -webkit-mask-image: linear-gradient(#fff 0 0), url("assets/fuck_ai_ahh.png");
+    -webkit-mask-repeat: no-repeat, repeat-x;
+    -webkit-mask-position: top left, bottom left;
+    -webkit-mask-size: 100% calc(100% - 69px), auto 69px;
+}
+
+.ai-ahh h1, .ai-ahh h2 {
+    font-weight: 1000;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-linear-gradient(left, #00f034, #8effb3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.ai-ahh h2 {
+    margin-bottom: 5em;
+}
+
+/*  Taken from https://stackoverflow.com/a/79345655  */
+@property --rotate {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.ai-ahh.box {
+    animation: rotate-gradient 5s linear infinite;
+    display: block;
+    background: linear-gradient(#6b6b6b, #424242) padding-box, linear-gradient(var(--rotate), #5213ff, #41fff6) border-box;
+    padding: 10px 20px;
+    border: 3px solid transparent;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgb(0, 229, 255);
+    margin-bottom: 5em;
+    min-height: 10em;
+}
+@keyframes rotate-gradient {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
+}
